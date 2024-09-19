@@ -1,0 +1,62 @@
+.contact {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url("images/iphone-393080.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .holder {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        padding: 2em;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        div {
+            flex: 1 1 15em;
+            background: #00000098;
+            width: 25%;
+            height: inherit;
+            padding: 1.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .icons {
+                font-size: 2em;
+            }
+            p {
+                all: unset;
+                text-transform: capitalize;
+                font-size: 2em;
+                font-weight: 600;
+                margin-top: 0.5rem;
+                cursor: pointer;
+                text-align: center;
+            }
+            div {
+                all: unset;
+                display: flex;
+                align-items: center;
+                font-size: 1.5em;
+                width: 80%;
+                justify-content: center;
+                cursor: pointer;
+                text-justify: newspaper;
+
+                a {
+                    all: unset;
+                    text-transform: capitalize;
+                    margin-left: 0.2em;
+                }
+            }
+        }
+    }
+}

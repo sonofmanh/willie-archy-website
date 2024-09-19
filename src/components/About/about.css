@@ -1,0 +1,13 @@
+.about {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("/images/pexels-pixabay-262367.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=about.css.map */

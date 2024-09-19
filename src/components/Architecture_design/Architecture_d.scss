@@ -1,0 +1,50 @@
+.archy {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.13)),
+        url("/images/blueprints-40280.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .glassholder {
+        box-sizing: border-box;
+        height: 100vh;
+        width: 100vw;
+        backdrop-filter: blur(0.3em);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        font-size: 2em;
+        hr {
+            all: unset;
+            width: 100vw;
+            height: 2px;
+            background-color: #fff;
+        }
+        div {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                text-decoration: none;
+                color: #ffffff;
+            }
+        }
+        .back {
+            margin-top: 2em;
+            a {
+                border: 2px solid #ffffff;
+                padding: 0.05em 1em;
+                border-radius: 0.2em;
+            }
+        }
+    }
+}

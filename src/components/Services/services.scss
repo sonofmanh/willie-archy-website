@@ -1,0 +1,47 @@
+.service {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("/images/H24_07.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        width: 50%;
+        height: 10em;
+    }
+    .section {
+        border-right: .2em solid #ffffff;
+        font-size: 2em;
+        font-weight: 500;
+        display: flex;
+        padding-right: 1.2em;
+        flex-direction: column;
+        backdrop-filter: blur(.2em);
+        justify-content: center;
+        align-items: end;
+        text-align: right;
+        p {
+            all: unset;
+            display: flex;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                text-transform: capitalize;
+                display: flex;
+                justify-content: end;
+            }
+            .none {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: aqua;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.portfolio {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("/images/H24_07.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio div {
+  width: 50%;
+  min-height: 10em;
+}
+.portfolio .section {
+  border-left: 0.2em solid #ffffff;
+  font-size: 2em;
+  background-color: rgba(255, 255, 255, 0.1215686275);
+  -webkit-backdrop-filter: blur(0.2em);
+          backdrop-filter: blur(0.2em);
+  font-weight: 500;
+  display: flex;
+  padding-left: 1.2em;
+  flex-direction: column;
+  justify-content: center;
+}
+.portfolio .section > * {
+  all: unset;
+  text-transform: capitalize;
+}
+.portfolio .section p > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}/*# sourceMappingURL=portfolio.css.map */
