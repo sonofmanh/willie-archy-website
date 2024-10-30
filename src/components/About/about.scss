@@ -1,13 +1,125 @@
 .about {
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     background-image: url("/images/pexels-pixabay-262367.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
     color: aliceblue;
-    display: flex;
-    align-items: center;
+    display: grid;
     justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .about_frame {
+        all: unset;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+
+        .alpha {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            .one {
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                .About_h1 {
+                    all: unset;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 8em;
+                    filter: drop-shadow(5px, 5px, 5px rgb(0, 0, 0));
+                }
+            } //one ended here
+            .two {
+                display: grid;
+                height: 100vh;
+                grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+                gap: 1em;
+                box-sizing: border-box;
+                padding-bottom: 2em;
+                .article {
+                    padding: 1em;
+                    border-radius: 0.2em;
+                    width: inherit;
+                    backdrop-filter: blur(0.9em);
+                    outline: #fff;
+                    background: #afafaf00;
+                    margin-left: auto;
+                    margin-top: auto;
+                    height: 40vh;
+                    display: flex;
+                    box-sizing: border-box;
+                    overflow: scroll;
+                    &::-webkit-scrollbar {
+                        width: 0;
+                    }
+                    p {
+                        text-transform: capitalize;
+                        font-size: 1.4em;
+                        font-weight: bold;
+                    }
+                }
+            }
+            //two ended here
+        }
+
+        .about_omega {
+            all: unset;
+            max-height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(17em, 2fr));
+            gap: 1em;
+            box-sizing: border-box;
+            padding: 2em;
+
+            .omega_sections {
+                background-color: #050505;
+                min-height: 30em;
+            }
+        }
+
+        .beta {
+            display: grid;
+        }
+    }
+}
+
+@media screen and (max-width : 480px) {
+    .about {
+        .about_frame {
+            padding: .5em 0em;
+            .alpha {
+                display: grid;
+                height: fit-content;
+                grid-template-columns: 1fr;
+                .one {
+                    height: fit-content;
+                    margin: 2em 0em;
+                    padding-top: 3.5em;
+                    .About_h1{
+                        line-height: .5em;
+                    }
+                }
+                .two{
+                    height: fit-content;
+                    .article{
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+    }
 }

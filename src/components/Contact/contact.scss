@@ -1,60 +1,74 @@
 .contact {
     width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    background-image: url("images/iphone-393080.jpg");
+    min-height: 100vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("/public/images/architect-3979490.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .holder {
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        padding: 2em;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1em;
-        div {
-            flex: 1 1 15em;
-            background: #00000098;
-            width: 25%;
-            height: inherit;
-            padding: 1.5em;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .icons {
-                font-size: 2em;
-            }
-            p {
-                all: unset;
-                text-transform: capitalize;
-                font-size: 2em;
-                font-weight: 600;
-                margin-top: 0.5rem;
-                cursor: pointer;
-                text-align: center;
-            }
-            div {
-                all: unset;
-                display: flex;
-                align-items: center;
-                font-size: 1.5em;
-                width: 80%;
-                justify-content: center;
-                cursor: pointer;
-                text-justify: newspaper;
+    box-sizing: border-box;
 
-                a {
-                    all: unset;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    .contact_frame {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100vh;
+        overflow: auto;
+        box-sizing: border-box;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        .contact_holder {
+            &.one {
+                all: unset;
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+                justify-content: center;
+                align-content: center;
+                gap: 1em;
+                padding: 1.5em;
+                .one_article {
+                    height: 50vh;
+                    background: #00000070;
+                    font-size: 2em;
                     text-transform: capitalize;
-                    margin-left: 0.2em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1em;
+                    line-height: 0.8em;
+                    letter-spacing: -0.01em;
+                    text-wrap: nowrap;
+
+                    .social_icons_links {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                    .socialplus{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        .contact_frame {
+            .contact_holder {
+                &.one {
+                    grid-template-columns: 1fr;
+                    height: fit-content;
                 }
             }
         }

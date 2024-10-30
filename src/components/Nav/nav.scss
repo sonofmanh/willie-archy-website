@@ -1,12 +1,77 @@
 .nav_holder {
     position: absolute;
-    // background-color: rgba(255, 255, 255, 0.363);
     z-index: 1;
-    width: 100vw;
+    width: 100dvw;
     min-height: 3em;
     display: flex;
     align-items: center;
     padding: 0.5em 0em;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    transition: 1s ease-in-out;
+
+    #checkbox,
+    label {
+        visibility: hidden;
+    }
+
+    #house {
+        font-size: 2em;
+        color: #ffffff;
+        margin-left: 2em;
+        align-items: center;
+        display: flex;
+    }
+
+    .link {
+        margin-left: auto;
+        display: flex;
+        width: fit-content;
+        gap: 0.5em;
+        margin-right: 1em;
+
+        .navlinks {
+            text-transform: capitalize;
+            text-decoration: none;
+            color: rgb(255, 253, 253);
+            align-items: center;
+            font-weight: bolder;
+            padding: 0.2em 0.6em;
+            font-size: 1.2em;
+
+            &:nth-child(1) {
+                border: 1px solid #ffffff;
+                border-radius: 0.2em;
+                &:hover {
+                    background-color: #ffffff;
+                    color: #000000;
+                }
+            }
+            &:hover {
+                border: 1px solid #ffffff;
+                border-radius: 0.2em;
+            }
+        }
+    }
+}
+
+.alt_nav_holder {
+    position: absolute;
+    z-index: 1;
+    width: 100dvw;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    padding: 0.5em 0em;
+    box-sizing: border-box;
+    color: #f5f5f5;
+    transition: 1s ease-in-out;
+
+    #checkbox,
+    label {
+        visibility: hidden;
+    }
+
     #house {
         font-size: 2em;
         color: #ffffff;
@@ -31,8 +96,9 @@
             padding: 0.2em 0.6em;
             font-size: 1.2em;
             
+
             &:nth-child(1) {
-                border: 2px solid #ffffff;
+                border: 1px solid #ffffff;
                 border-radius: 0.2em;
                 &:hover {
                     background-color: #ffffff;
@@ -40,9 +106,76 @@
                 }
             }
             &:hover {
-                border: 2px solid #ffffff;
+                border: 1px solid #ffffff;
                 border-radius: 0.2em;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav_holder {
+        padding: 0.9em;
+        display: grid;
+        overflow: hidden;
+        height: 100vh;
+        background: #000000f3;
+        transition: 50ms ease-in-out;
+
+        // display: none;
+        label {
+            visibility: visible;
+            margin-left: 0;
+            font-size: 2em;
+            margin-bottom: -15em;
+        }
+
+        #house {
+            margin-left: 0em;
+        }
+
+        .link {
+            display: grid;
+            position: absolute;
+            // background: #00000065;
+            height: fit-content;
+            width: 100vw;
+        }
+        input:checked ~ .link {
+            color: green;
+        }
+    }
+    .alt_nav_holder {
+        position: absolute;
+        z-index: 1;
+        width: 100dvw;
+        min-height: 3em;
+        display: flex;
+        align-items: center;
+        padding: 0.5em 0em;
+        box-sizing: border-box;
+        color: #f5f5f5;
+
+        label {
+            visibility: visible;
+            margin-left: auto;
+            font-size: 2em;
+            // margin-bottom: -15em;
+        }
+        #checkbox {
+            visibility: hidden;
+        }
+
+        #house {
+            font-size: 2em;
+            color: #ffffff;
+            margin-left: 0.5em;
+            align-items: center;
+            display: flex;
+        }
+
+        .link {
+            display: none;
         }
     }
 }

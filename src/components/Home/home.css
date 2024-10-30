@@ -1,12 +1,9 @@
 .home {
-  min-width: 100vw;
-  height: 100%;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   color: aliceblue;
-  display: flex;
-  align-items: end;
-  justify-content: flex-start;
+  box-sizing: border-box;
 }
 .home .video {
   position: absolute;
@@ -18,33 +15,68 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.home div {
-  margin-left: 5em;
-  margin-bottom: 10em;
+.home .banner_frame {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+  box-sizing: border-box;
 }
-.home div > * {
+.home .banner_frame::-webkit-scrollbar {
+  width: 0;
+}
+.home .banner_frame .second_banner_frame {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.home .banner_frame .second_banner_frame .Banner_article {
+  margin-left: 5em;
+}
+.home .banner_frame .second_banner_frame .Banner_article .banner_p {
   all: unset;
   text-transform: capitalize;
   line-height: normal;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 200;
   display: block;
   color: rgb(255, 255, 255);
 }
-.home div > a {
+.home .banner_frame .second_banner_frame .Banner_article .banner_anchor {
   margin-top: 1em;
-  font-size: 1.7em;
+  font-size: 1.5em;
   display: flex;
   align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #ffffff;
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.2em 1em;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 0.2em;
   position: relative;
 }
-.home div > a:hover {
-  background-color: #ffffff;
-  color: black;
-}/*# sourceMappingURL=home.css.map */
+.home .banner_frame .second_banner_frame .Banner_article .banner_anchor:hover {
+  outline: none;
+  border-color: transparent;
+  background-color: rgba(229, 228, 228, 0.6078431373);
+  color: rgb(255, 255, 255);
+}
+.home .banner_frame .third_banner_frame {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .home .banner_frame .second_banner_frame .Banner_article {
+    margin-left: 0em;
+    box-sizing: border-box;
+    padding: 0em 0.5em;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+}

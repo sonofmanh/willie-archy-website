@@ -2,11 +2,14 @@
 
 .App {
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   scroll-behavior: smooth;
-  overflow-y: hidden;
   font-size: 5em;
-  font-family: "Saira Condensed", sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }

@@ -9,13 +9,14 @@
     position: relative;
     color: rgb(255, 255, 255);
     font-size: 1.5em;
+    box-sizing: border-box;
 
     &::-webkit-scrollbar {
         width: 0;
     }
 
     div {
-        height: 80vh;
+        height: 100vh;
         width: inherit;
         display: flex;
         align-items: end;

@@ -21,12 +21,12 @@ const Arc_commercial = lazy(() => import('./components/arc_commercial/Arc_commer
 const App = () => {
   return (
     <BrowserRouter className='App'>
-      <Suspense fallback='loading...'>
+      <Suspense fallback=<h1>Eilliw_Architectures</h1>>
         <Routes>
           <Route path='/' element={<Sharedlayouts />}>
             <Route index element={<Homepage />} />
 
-            <Route path='Service' element={<Sharedservice />}>
+            <Route path='Service'  element={<Sharedservice />}>
               <Route index element={<Service />} />
               <Route path='Architectural_design' element={<Architecture_design />} />
               <Route path='Architectural_design/resident' element={<Arch_resident />} />

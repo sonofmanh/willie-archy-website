@@ -1,79 +1,160 @@
 .arc_resident {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/blueprints-40280.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
   color: aliceblue;
-  font-size: 1.5em;
+  box-sizing: border-box;
+  overflow: scroll;
 }
 .arc_resident::-webkit-scrollbar {
   width: 0;
 }
-.arc_resident div {
-  height: 80vh;
-  width: inherit;
-  display: flex;
-  align-items: end;
-  justify-content: baseline;
+.arc_resident .arc_resident_frame {
+  all: unset;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: absolute;
 }
-.arc_resident div div {
+.arc_resident .arc_resident_frame .arc_frame1 {
+  min-height: 100vh;
+  display: grid;
+  align-content: end;
+  text-transform: capitalize;
+}
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox {
   all: unset;
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
+  text-wrap: wrap;
   flex-direction: column;
   justify-content: baseline;
   align-items: flex-start;
+  font-size: 1.5em;
   margin: 2em;
   text-transform: capitalize;
 }
-.arc_resident div div .backarrow {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox .backarrow {
   animation: 1s back ease-in-out infinite;
 }
-.arc_resident div div p {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox p {
   all: unset;
 }
-.arc_resident div div p span {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox p span {
   font-size: 0.7em;
   text-transform: uppercase;
 }
-.arc_resident div div p .one {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox p .one {
   font-size: 0.85em;
   color: rgba(255, 255, 255, 0.4039215686);
 }
-.arc_resident div div p a {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox p a {
   all: unset;
   text-transform: capitalize;
   cursor: pointer;
 }
-.arc_resident div div .ancho {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox .ancho {
   margin-top: 0.8rem;
   display: flex;
   align-items: center;
 }
-.arc_resident div div .ancho span {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox .ancho span {
   padding-left: 1em;
   display: grid;
   place-items: center;
 }
-.arc_resident div div .ancho span .green {
+.arc_resident .arc_resident_frame .arc_frame1 .arcbox .ancho span .green {
   color: white;
   font-size: larger;
   transition: all;
   animation: 1s scale ease-in-out infinite;
 }
-.arc_resident section {
-  width: 100%;
-  height: 100vh;
+.arc_resident .arc_resident_frame .arc_frame2 {
+  width: 100vw;
+  height: auto;
+  background: rgba(0, 0, 0, 0.8588235294);
+  display: grid;
+  justify-content: center;
+  align-content: center;
   box-sizing: border-box;
-  background: #000;
-  padding: 2em 3em;
+}
+.arc_resident .arc_resident_frame .arc_frame2 .arc_frame2_frame {
+  all: unset;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  justify-content: center;
+  align-content: center;
+  width: 95vw;
+  height: 95vh;
+  box-sizing: border-box;
+}
+.arc_resident .arc_resident_frame .arc_frame2 .arc_frame2_frame .img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+.arc_resident .arc_resident_frame .arc_frame2 .arc_frame2_frame .img .frame2_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.arc_resident .arc_resident_frame .arc_frame2 .arc_frame2_frame .article {
+  all: unset;
+  width: 100%;
+  text-transform: initial;
+  display: flex;
+  flex-direction: column;
+  text-justify: newspaper;
+  text-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0em 0.3em;
+}
+.arc_resident .arc_resident_frame .arc_frame2 .arc_frame2_frame .article h1 {
+  all: unset;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.arc_resident .arc_resident_frame .arc_frame2 .arc_frame2_frame .article p {
+  text-justify: newspaper;
+}
+.arc_resident .arc_resident_frame .arc_frame3 {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: rgba(197, 197, 197, 0.7921568627);
+  color: #000;
+}
+.arc_resident .arc_resident_frame .arc_frame3 .arc_frame3_frame {
+  all: unset;
+  margin: 1em;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+}
+.arc_resident .arc_resident_frame .arc_frame3 .arc_frame3_frame .article h1 {
+  all: unset;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.arc_resident .arc_resident_frame .arc_frame3 .arc_frame3_frame .article p {
+  text-justify: newspaper;
+}
+.arc_resident .arc_resident_frame .arc_frame3 .arc_frame3_frame .img video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 @keyframes scale {
@@ -93,4 +174,16 @@
   100% {
     color: white;
   }
-}/*# sourceMappingURL=arcresident.css.map */
+}
+@media screen and (max-width: 480px) {
+  .arc_resident .arc_resident_frame .arc_frame2 .arc_frame2_frame {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+  .arc_resident .arc_resident_frame .arc_frame3 .arc_frame3_frame {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+}
